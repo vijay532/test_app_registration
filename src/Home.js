@@ -12,6 +12,7 @@ export default class Home extends Component {
     
     auth.signOut().then(()=>{
       console.log("sign out ")
+      this.props.history.push('/')
     })
     .catch((err)=>{
       console.log(err);

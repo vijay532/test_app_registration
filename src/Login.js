@@ -43,21 +43,18 @@ export default class Login extends Component {
         // const email=this.state.email
         // const password=this.state.password
         //console.log(this.state);
-        //console.log(email + password);
-			auth.createUserWithEmailAndPassword(this.state.email, this.state.password)
-			.then((userCredential) => {
-					// Signed in 
-					console.log(userCredential.email);
-					// ...
-					// history.push({
-					//     pathname:'/register',
-					//     state:{detail:email}
-					// })
-			})
-			.catch((error) => {
-					alert(error.message)
-					// ..
-			});
+				//console.log(email + password);
+			this.props.history.push('/register')
+			// auth.createUserWithEmailAndPassword(this.state.email, this.state.password)
+			// .then((userCredential) => {
+			// 		// Signed in 
+			// 		console.log(userCredential.email);
+			// 		this.props.history.push('/home')
+			// })
+			// .catch((error) => {
+			// 		alert(error.message)
+			// 		// ..
+			// });
     }
     
     render() {
